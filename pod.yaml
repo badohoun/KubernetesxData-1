@@ -1,0 +1,17 @@
+apiversion: v1
+kind: Pod
+metadata:
+  name: pod-test
+spec:
+  containers:
+  - name: pod-test
+    image: espero20/k8s_test:latest
+    ports:
+    - containerPort: 80
+    ressources:
+     requests:
+      memory: "128Mi"
+      cpu: "256m"
+     limits:
+       memory: "256Mi"
+       cpu: "512m"
